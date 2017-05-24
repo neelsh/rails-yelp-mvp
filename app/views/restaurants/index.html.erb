@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>All the restaurants</h1>
+  <br>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li>Name: <%=restaurant.name%></li>
+      <li>Address: <%= restaurant.address %></li>
+      <li>Cuisine: <%= restaurant.category %></li>
+      <li>Description: <%= restaurant.description %></li>
+      <li>Michelin stars: <%= restaurant.stars %></li>
+      <hr>
+    <% end %>
+  </ul>
+
+</div>
