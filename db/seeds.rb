@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts 'Cleaning database...'
+Restaurant.destroy_all
+
+10.times { Restaurant.create(name: Faker::HitchhikersGuideToTheGalaxy.character, address: Faker::HitchhikersGuideToTheGalaxy.location, description: Faker::HitchhikersGuideToTheGalaxy.quote, stars: 2) }
